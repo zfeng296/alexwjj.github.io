@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>文件流的转换与下载 | 俊劫的学习基地</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="俊劫的学习基地是俊劫的个人博客，用于记录学习笔记、分享音乐、书籍、旅行等个人兴趣的站点。">
+    <meta name="keywords" content="俊劫,俊劫的博客,博客,个人博客,vue,vuejs,vuepress,vuepress-theme-reco">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.08164ada.css" as="style"><link rel="preload" href="/assets/js/app.c9b72092.js" as="script"><link rel="preload" href="/assets/js/2.db611675.js" as="script"><link rel="preload" href="/assets/js/78.5134230f.js" as="script"><link rel="preload" href="/assets/js/5.5bec4f64.js" as="script"><link rel="prefetch" href="/assets/js/10.9564f3cb.js"><link rel="prefetch" href="/assets/js/11.b99c8207.js"><link rel="prefetch" href="/assets/js/12.ceea3712.js"><link rel="prefetch" href="/assets/js/13.34c9aeb5.js"><link rel="prefetch" href="/assets/js/14.434ab9e6.js"><link rel="prefetch" href="/assets/js/15.b2915af7.js"><link rel="prefetch" href="/assets/js/16.e35abd32.js"><link rel="prefetch" href="/assets/js/17.596faee9.js"><link rel="prefetch" href="/assets/js/18.118d4115.js"><link rel="prefetch" href="/assets/js/19.ca25a131.js"><link rel="prefetch" href="/assets/js/20.aa600e99.js"><link rel="prefetch" href="/assets/js/21.afe30266.js"><link rel="prefetch" href="/assets/js/22.7e22a7dc.js"><link rel="prefetch" href="/assets/js/23.9797a03e.js"><link rel="prefetch" href="/assets/js/24.a28241e7.js"><link rel="prefetch" href="/assets/js/25.b7011e09.js"><link rel="prefetch" href="/assets/js/26.b24c155a.js"><link rel="prefetch" href="/assets/js/27.2428da62.js"><link rel="prefetch" href="/assets/js/28.f068135e.js"><link rel="prefetch" href="/assets/js/29.b860e89a.js"><link rel="prefetch" href="/assets/js/3.08913bfc.js"><link rel="prefetch" href="/assets/js/30.b11e5218.js"><link rel="prefetch" href="/assets/js/31.e47b9a4f.js"><link rel="prefetch" href="/assets/js/32.70c83ed0.js"><link rel="prefetch" href="/assets/js/33.c85ae1c0.js"><link rel="prefetch" href="/assets/js/34.61d97a1d.js"><link rel="prefetch" href="/assets/js/35.17a018d2.js"><link rel="prefetch" href="/assets/js/36.b61990d1.js"><link rel="prefetch" href="/assets/js/37.1ef84e16.js"><link rel="prefetch" href="/assets/js/38.3ff60c54.js"><link rel="prefetch" href="/assets/js/39.4ddb480c.js"><link rel="prefetch" href="/assets/js/4.fb6d1e0f.js"><link rel="prefetch" href="/assets/js/40.c57ab714.js"><link rel="prefetch" href="/assets/js/41.baf7a09b.js"><link rel="prefetch" href="/assets/js/42.501f88b5.js"><link rel="prefetch" href="/assets/js/43.1b855cb5.js"><link rel="prefetch" href="/assets/js/44.a1a1f6b7.js"><link rel="prefetch" href="/assets/js/45.c4797674.js"><link rel="prefetch" href="/assets/js/46.64d1dfc8.js"><link rel="prefetch" href="/assets/js/47.53b47a08.js"><link rel="prefetch" href="/assets/js/48.aeaff2a5.js"><link rel="prefetch" href="/assets/js/49.bc540f92.js"><link rel="prefetch" href="/assets/js/50.c8e86d4e.js"><link rel="prefetch" href="/assets/js/51.581946fb.js"><link rel="prefetch" href="/assets/js/52.fba39914.js"><link rel="prefetch" href="/assets/js/53.b2015a27.js"><link rel="prefetch" href="/assets/js/54.e802b36a.js"><link rel="prefetch" href="/assets/js/55.03d32fcc.js"><link rel="prefetch" href="/assets/js/56.c579e9f5.js"><link rel="prefetch" href="/assets/js/57.66204ab6.js"><link rel="prefetch" href="/assets/js/58.b65e9376.js"><link rel="prefetch" href="/assets/js/59.2390bd21.js"><link rel="prefetch" href="/assets/js/6.955410c8.js"><link rel="prefetch" href="/assets/js/60.6b9cb92d.js"><link rel="prefetch" href="/assets/js/61.783e390b.js"><link rel="prefetch" href="/assets/js/62.9c8818c4.js"><link rel="prefetch" href="/assets/js/63.6294b969.js"><link rel="prefetch" href="/assets/js/64.a504a898.js"><link rel="prefetch" href="/assets/js/65.51f7bc8b.js"><link rel="prefetch" href="/assets/js/66.eeaa7218.js"><link rel="prefetch" href="/assets/js/67.c8dd092a.js"><link rel="prefetch" href="/assets/js/68.690d3e62.js"><link rel="prefetch" href="/assets/js/69.1cb62fe6.js"><link rel="prefetch" href="/assets/js/7.eeece75d.js"><link rel="prefetch" href="/assets/js/70.9bcff00b.js"><link rel="prefetch" href="/assets/js/71.e15a5998.js"><link rel="prefetch" href="/assets/js/72.4261e7c2.js"><link rel="prefetch" href="/assets/js/73.3debc585.js"><link rel="prefetch" href="/assets/js/74.deadb7f0.js"><link rel="prefetch" href="/assets/js/75.3138d51a.js"><link rel="prefetch" href="/assets/js/76.d1956e1e.js"><link rel="prefetch" href="/assets/js/77.1e61bd15.js"><link rel="prefetch" href="/assets/js/79.0a24e0ec.js"><link rel="prefetch" href="/assets/js/8.dc7dd2ce.js"><link rel="prefetch" href="/assets/js/80.d5dca169.js"><link rel="prefetch" href="/assets/js/81.cafea166.js"><link rel="prefetch" href="/assets/js/82.58129a44.js"><link rel="prefetch" href="/assets/js/83.4c05b86b.js"><link rel="prefetch" href="/assets/js/84.e2019b2c.js"><link rel="prefetch" href="/assets/js/85.14eb5e29.js"><link rel="prefetch" href="/assets/js/86.3a7cbe40.js"><link rel="prefetch" href="/assets/js/87.a044cfbd.js"><link rel="prefetch" href="/assets/js/88.91d15c78.js"><link rel="prefetch" href="/assets/js/89.8a9f803e.js"><link rel="prefetch" href="/assets/js/9.e2a59765.js"><link rel="prefetch" href="/assets/js/90.51cc100c.js"><link rel="prefetch" href="/assets/js/91.b85d0bf5.js"><link rel="prefetch" href="/assets/js/92.a83df3a6.js"><link rel="prefetch" href="/assets/js/93.e71681cb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.08164ada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-f848d4e8><div class="global-loading-wrapper" data-v-137da995 data-v-f848d4e8 data-v-f848d4e8><div class="loader-main" data-v-137da995><img src="/assets/img/loading.18d75e19.gif" alt="loading" data-v-137da995></div></div> <div class="hide" data-v-f848d4e8><header class="navbar" data-v-f848d4e8><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="俊劫的学习基地" class="logo"> <span class="site-name">俊劫的学习基地</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">选择模式</h4> <ul class="color-mode-options"><li class="dark">深色模式</li><li class="light active">浅色模式</li><li class="read">阅读模式</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <ul class="suggestions" style="display:none;"></ul></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i></i>前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档教程</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/docs/nav/" class="nav-link"><i class="iconfont reco-blog"></i>资源导航
+</a></li><li class="dropdown-subitem"><a href="/web/docs/alexwjj/fe-study/" class="nav-link"><i class="iconfont reco-blog"></i>2022前端面试精华
+</a></li><li class="dropdown-subitem"><a href="/web/docs/es6/" class="nav-link"><i class="iconfont reco-blog"></i>ES6 入门教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/wangdoc/javascript/" class="nav-link"><i class="iconfont reco-blog"></i>网道-JavaScript 教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/angular/" class="nav-link"><i class="iconfont reco-blog"></i>Angular 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/react/" class="nav-link"><i class="iconfont reco-blog"></i>React 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/vue/" class="nav-link"><i class="iconfont reco-blog"></i>Vue 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/node/" class="nav-link"><i class="iconfont reco-blog"></i>Node 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/babel/" class="nav-link"><i class="iconfont reco-blog"></i>Babel 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/webpack/" class="nav-link"><i class="iconfont reco-blog"></i>Webpack 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/typescript/" class="nav-link"><i class="iconfont reco-blog"></i>TypeScript 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/runoob/" class="nav-link"><i class="iconfont reco-blog"></i>菜鸟教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/docschina/" class="nav-link"><i class="iconfont reco-blog"></i>印记中文
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>索引
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link"><i class="iconfont reco-category"></i>分类
+</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>标签
+</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link"><i class="iconfont reco-date"></i>归档
+</a></li></ul></div></div><div class="nav-item"><a href="/bookshop/message-board/" class="nav-link"><i class="iconfont reco-suggestion"></i>留言板
+</a></div><div class="nav-item"><a href="/web/docs/nav/" class="nav-link"><i class="iconfont reco-api"></i>资源导航
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>联系</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/alexwjj" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/bookshop/linkme/" class="nav-link"><i class="iconfont reco-account"></i>关于我
+</a></li></ul></li><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/alexwjj/alexwjj.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>本站源码
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://alexwjj.github.io/old-blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>老版博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/bookshop/friendslink/" class="nav-link"><i class="iconfont reco-friend"></i>友情链接
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-f848d4e8></div> <aside class="sidebar" data-v-f848d4e8><div class="personal-info-wrapper" data-v-4a2491c0 data-v-f848d4e8><img src="/img/logo.png" alt="author-avatar" class="personal-img" data-v-4a2491c0> <div class="author" data-v-4a2491c0>
+    俊劫
+  </div> <div class="personal-info-details" data-v-4a2491c0><div data-v-4a2491c0>文章：<span data-v-4a2491c0>70</span></div> <div data-v-4a2491c0>地点：<span data-v-4a2491c0>杭州·西湖</span></div></div> <div class="slogan" data-v-4a2491c0>
+    just do it
+  </div> <ul class="social-links" data-v-4a2491c0><li class="social-item" data-v-4a2491c0><i class="iconfont reco-github" style="color:#3eaf7c;" data-v-4a2491c0></i></li><li class="social-item" data-v-4a2491c0><i class="iconfont reco-juejin" style="color:#00a1d6;" data-v-4a2491c0></i></li></ul></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i></i>前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档教程</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/web/docs/nav/" class="nav-link"><i class="iconfont reco-blog"></i>资源导航
+</a></li><li class="dropdown-subitem"><a href="/web/docs/alexwjj/fe-study/" class="nav-link"><i class="iconfont reco-blog"></i>2022前端面试精华
+</a></li><li class="dropdown-subitem"><a href="/web/docs/es6/" class="nav-link"><i class="iconfont reco-blog"></i>ES6 入门教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/wangdoc/javascript/" class="nav-link"><i class="iconfont reco-blog"></i>网道-JavaScript 教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/angular/" class="nav-link"><i class="iconfont reco-blog"></i>Angular 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/react/" class="nav-link"><i class="iconfont reco-blog"></i>React 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/vue/" class="nav-link"><i class="iconfont reco-blog"></i>Vue 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/node/" class="nav-link"><i class="iconfont reco-blog"></i>Node 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/babel/" class="nav-link"><i class="iconfont reco-blog"></i>Babel 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/webpack/" class="nav-link"><i class="iconfont reco-blog"></i>Webpack 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/typescript/" class="nav-link"><i class="iconfont reco-blog"></i>TypeScript 文档
+</a></li><li class="dropdown-subitem"><a href="/web/docs/runoob/" class="nav-link"><i class="iconfont reco-blog"></i>菜鸟教程
+</a></li><li class="dropdown-subitem"><a href="/web/docs/docschina/" class="nav-link"><i class="iconfont reco-blog"></i>印记中文
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>索引
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link"><i class="iconfont reco-category"></i>分类
+</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link"><i class="iconfont reco-tag"></i>标签
+</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link"><i class="iconfont reco-date"></i>归档
+</a></li></ul></div></div><div class="nav-item"><a href="/bookshop/message-board/" class="nav-link"><i class="iconfont reco-suggestion"></i>留言板
+</a></div><div class="nav-item"><a href="/web/docs/nav/" class="nav-link"><i class="iconfont reco-api"></i>资源导航
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>联系</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/alexwjj" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/bookshop/linkme/" class="nav-link"><i class="iconfont reco-account"></i>关于我
+</a></li></ul></li><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/alexwjj/alexwjj.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>本站源码
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://alexwjj.github.io/old-blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-document"></i>老版博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/bookshop/friendslink/" class="nav-link"><i class="iconfont reco-friend"></i>友情链接
+</a></li></ul></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/pages/2c385d954af63/" class="sidebar-link">有赞前端培训</a></li><li><a href="/pages/05c534dbae294/" class="sidebar-link">从零搭建服务器</a></li><li><a href="/pages/1736b20fa8753/" aria-current="page" class="active sidebar-link">文件流的转换与下载</a></li><li><a href="/pages/91bad3266146c/" class="sidebar-link">2021 从跳槽到被裁</a></li><li><a href="/pages/c863681e7285f/" class="sidebar-link">移动端适配</a></li><li><a href="/pages/71a2332238f87/" class="sidebar-link">【3月】关于最近的状态</a></li><li><a href="/pages/dc00f73d9d1d9/" class="sidebar-link">Egg + Puppeteer 实现Html转PDF</a></li><li><a href="/pages/bc7fdbb035246/" class="sidebar-link">web打印，一篇搞定</a></li><li><a href="/pages/8c4ef214c7886/" class="sidebar-link">VuePress + Travis CI + Github Pages搭建个人博客</a></li><li><a href="/bookshop/message-board/" class="sidebar-link">留言板</a></li><li><a href="/pages/b4081db6efbd9/" class="sidebar-link">【4月】一个计划</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-3"><div class="articleInfo-wrap" data-v-13f19dad><div class="articleInfo" data-v-13f19dad><ul class="breadcrumbs" data-v-13f19dad><li data-v-13f19dad><a href="/" title="首页" class="fa fa-laptop-house router-link-active" data-v-13f19dad></a></li> <li data-v-13f19dad><a href="/categories/?category=%E5%85%B6%E4%BB%96" title="分类" data-v-13f19dad>其他</a></li> <!----> <!----></ul> <div class="info" data-v-13f19dad><div title="作者" class="author fa fa-user" data-v-13f19dad><a href="javascript:;" data-v-13f19dad>俊劫</a></div> <div title="创建时间" class="date fa fa-calendar-alt" data-v-13f19dad><a href="javascript:;" data-v-13f19dad>2020/10/29 00:00:00</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+            文件流的转换与下载
+          </h1> <div class="theme-vdoing-content content__default"><h2 id="使用createobjecturl遇到的问题"><a href="#使用createobjecturl遇到的问题" class="header-anchor">#</a> 使用createObjectURL遇到的问题</h2> <h3 id="在chrome中的表现"><a href="#在chrome中的表现" class="header-anchor">#</a> 在chrome中的表现</h3> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65b969abecd04ae08da5d05e0ef78518~tplv-k3u1fbpfcp-watermark.image" alt=""> <code>blob:http://172.28.74.136:8019/c2c5811e-906b-48d1-93a8-edb89c237f54</code></p> <h3 id="在ie中的表现"><a href="#在ie中的表现" class="header-anchor">#</a> 在IE中的表现</h3> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/06e4d26dcaff492a874c75d090e3fc8f~tplv-k3u1fbpfcp-watermark.image" alt=""> <code>blob:9C9B0F3D-3E46-46F3-95AF-524089FB5E0F</code></p> <h3 id="第一时间想到的时候-createobjecturl这个属性的兼容问题-在ie中生成的链接不一样-于是决定手动去拼接一个和chrome一样的地址"><a href="#第一时间想到的时候-createobjecturl这个属性的兼容问题-在ie中生成的链接不一样-于是决定手动去拼接一个和chrome一样的地址" class="header-anchor">#</a> 第一时间想到的时候，createObjectURL这个属性的兼容问题，在ie中生成的链接不一样，于是决定手动去拼接一个和chrome一样的地址</h3> <h4 id="blob-window-location-origin-url-createobjecturl-blob-split-1"><a href="#blob-window-location-origin-url-createobjecturl-blob-split-1" class="header-anchor">#</a> <code>blob:${window.location.origin}/${URL.createObjectURL(blob).split(':')[1]}</code></h4> <p>结果遇到了另外一个坑，window.location.origin在IE中的结果是Undefined。。。换种方式拼接</p> <h4 id="blob-window-location-protocol-window-location-host-url-createobjecturl-blob-split-1"><a href="#blob-window-location-protocol-window-location-host-url-createobjecturl-blob-split-1" class="header-anchor">#</a> <code>blob:${window.location.protocol}//${window.location.host}/${URL.createObjectURL(blob).split(':')[1]}</code></h4> <p>难受的是拼好也没用，在IE中，这样的方式也无法下载文件，于是乎，谷歌搜索。</p> <h3 id="解决方式"><a href="#解决方式" class="header-anchor">#</a> 解决方式</h3> <p><code>window.navigator.msSaveOrOpenBlob(blob, filename)</code> <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c7f7e3df74fe47d3923736abfca43d4f~tplv-k3u1fbpfcp-watermark.image" alt=""></p> <h2 id="文件流"><a href="#文件流" class="header-anchor">#</a> 文件流</h2> <h3 id="文件流相关接口"><a href="#文件流相关接口" class="header-anchor">#</a> 文件流相关接口</h3> <ul><li>内置文件流接口：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank" rel="noopener noreferrer">Blob<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>（文件流接口定义）</li> <li>内置文件流对象 ：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" target="_blank" rel="noopener noreferrer">File<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>（单文件，继承于接口Blob，故可使用Blod的方法级）和 FileList（多文件集合）</li> <li>内置文件流读取对象 ：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader" target="_blank" rel="noopener noreferrer">FileReader<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>（单文件读取）</li></ul> <h2 id="文件流转换"><a href="#文件流转换" class="header-anchor">#</a> 文件流转换</h2> <h3 id="_1、file转base64"><a href="#_1、file转base64" class="header-anchor">#</a> 1、file转base64</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * 上传附件转base64
+ * @param {File} file 文件流
+ */
+export const fileByBase64 = (file, callback) =&gt; {
+  var reader = new FileReader();
+  // 传入一个参数对象即可得到基于该参数对象的文本内容
+  reader.readAsDataURL(file);
+  reader.onload = function (e) {
+    // target.result 该属性表示目标对象的DataURL
+    console.log(e.target.result);
+    callback(e.target.result)
+  };
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="_2、base64转blob"><a href="#_2、base64转blob" class="header-anchor">#</a> 2、base64转blob</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * base64转Blob
+ * @param {*} data 
+ */
+export const base64ByBlob = (base64, callback) =&gt; {
+  var arr = base64.split(','), mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n);
+  }
+  console.log(new Blob([u8arr], { type: mime }))
+  callback(new Blob([u8arr], { type: mime }))
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_3、blob转url"><a href="#_3、blob转url" class="header-anchor">#</a> 3、blob转url</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>var url = window.URL.createObjectURL(blob)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_4、使用demo"><a href="#_4、使用demo" class="header-anchor">#</a> 4、使用demo</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;文件流的转换与下载&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type=&quot;file&quot; id=&quot;input&quot;/&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    const input = document.querySelector(&quot;input&quot;);
+    input.addEventListener(&quot;input&quot;, inputChanged);
+    function inputChanged(e) {
+      console.log(e.target.files[0], &quot;files&quot;);
+      fileByBase64(e.target.files[0], () =&gt; {});
+      //   fileByBase64(e.target.files[0], base64ByBlob);
+    }
+    const fileByBase64 = (file, callback) =&gt; {
+      var reader = new FileReader();
+      // 传入一个参数对象即可得到基于该参数对象的文本内容
+      reader.readAsDataURL(file);
+      reader.onload = function (e) {
+        // target.result 该属性表示目标对象的DataURL
+        console.log(e.target.result, &quot;fileByBase64&quot;);
+        callback(e.target.result);
+      };
+    };
+    const base64ByBlob = (base64) =&gt; {
+      var arr = base64.split(&quot;,&quot;),
+        mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n);
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+      }
+      const blob = new Blob([u8arr], { type: mime });
+      console.log(blob, &quot;base64ByBlob&quot;);
+      // console.log(window.URL.createObjectURL(blob), &quot;URL&quot;);
+      //   downloadByFile(blob);
+      //   callback(new Blob([u8arr], { type: mime }));
+    };
+    const downloadByFile = (blob) =&gt; {
+      // 创建a标签
+      const alink = document.createElement(&quot;a&quot;);
+      // 文件名
+      alink.download = &quot;backup.txt&quot;;
+      // 开始下载
+      alink.style.display = &quot;none&quot;;
+      // for IE
+      if (window.navigator &amp;&amp; window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(blob, &quot;backup.txt&quot;);
+      } else {
+        // for No-IE
+        alink.href = URL.createObjectURL(blob);
+        document.body.appendChild(alink);
+        // 触发点击a标签事件
+        alink.click();
+        document.body.removeChild(alink);
+      }
+    };
+  &lt;/script&gt;
+&lt;/html&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br></div></div><h2 id="文件下载"><a href="#文件下载" class="header-anchor">#</a> 文件下载</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>import axios from 'axios';
+import request from '@/utils/request';
+axios.defaults.timeout = 1000 * 60 * 5;
+
+// 取response中的文件名称
+const getFileNameFromHeader = headers =&gt; {
+  if (!headers) {
+    return '';
+  }
+  const contentDisposition = headers['content-disposition'];
+  if (!contentDisposition) {
+    return '';
+  }
+  const reg = /filename=(.*)/;
+  const result = reg.exec(contentDisposition);
+  return result ? decodeURI(result[1]) : '';
+};
+
+export default {
+  // 下载文件， 传入文件流
+  downloadByFile (res) {
+    // 处理返回的文件流
+    const content = res.data;
+    const headers = res.headers;
+    // 创建a标签
+    const alink = document.createElement('a');
+    // 文件名
+    alink.download = getFileNameFromHeader(headers);
+    // 开始下载
+    alink.style.display = 'none';
+    const blob = new Blob([content]);
+    // for IE
+    if (window.navigator &amp;&amp; window.navigator.msSaveOrOpenBlob) {
+      window.navigator.msSaveOrOpenBlob(blob, getFileNameFromHeader(headers));
+    } else {
+      // for No-IE
+      alink.href = URL.createObjectURL(blob);
+      document.body.appendChild(alink);
+      // 触发点击a标签事件
+      alink.click();
+      document.body.removeChild(alink);
+    }
+  },
+
+  // 下载文件， 传入接口名
+  downloadByUrl (exportParams) {
+    return new Promise(async (resolve, reject) =&gt; {
+      const {
+        url,
+        params,
+        fileName,
+        method
+      } = exportParams;
+      const requestParams = {
+        url: url,
+        method: method || 'get',
+        responseType: 'blob'
+      };
+      // 接口请求方式
+      if (method === 'post') {
+        requestParams.data = params;
+      } else {
+        requestParams.params = params;
+      }
+      try {
+        const res = await request(requestParams);
+        // 请求成功
+        resolve(res);
+        // 处理返回的文件流
+        const content = res.data;
+        const headers = res.headers;
+        // 创建a标签
+        const alink = document.createElement('a');
+        // 文件名
+        if (fileName) {
+          alink.download = fileName;
+        } else {
+          alink.download = getFileNameFromHeader(headers);
+        }
+        // 开始下载
+        alink.style.display = 'none';
+        const blob = new Blob([content]);
+        // for IE
+        if (window.navigator &amp;&amp; window.navigator.msSaveOrOpenBlob) {
+          window.navigator.msSaveOrOpenBlob(blob, getFileNameFromHeader(headers));
+        } else {
+          // for No-IE
+          alink.href = URL.createObjectURL(blob);
+          document.body.appendChild(alink);
+          // 触发点击a标签事件
+          alink.click();
+          document.body.removeChild(alink);
+        }
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+};
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br></div></div><h2 id="大文件上传-与-断点续传"><a href="#大文件上传-与-断点续传" class="header-anchor">#</a> 大文件上传 与 断点续传</h2> <ul><li>大文件上传基本都是分片，Blob.slice</li> <li>断点续传：根据文件内容生成hash作为分片的名称，然后和服务端比对，上传过的不再上传。</li></ul> <p>参考这篇文章，讲的很清楚 ：<a href="https://juejin.im/post/6844904046436843527" target="_blank" rel="noopener noreferrer">字节跳动面试官：请你实现一个大文件上传和断点续传<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li><a href="https://juejin.im/post/6844903617606975496" target="_blank" rel="noopener noreferrer">JavaScript 文件流转换与使用<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000020153597" target="_blank" rel="noopener noreferrer">javascript实现上传文件流file转base64，base64转blob，blob转url访问地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://segmentfault.com/a/1190000022208272" target="_blank" rel="noopener noreferrer">前端文件操作--上传篇<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <div class="page-edit"><div class="tags"><a href="/tags/?tag=%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80" title="标签">#前端基础</a></div> <div class="last-updated"><span class="prefix">最近更新时间：</span> <span class="time">2021/05/01 17:06:28</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/05c534dbae294/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">从零搭建服务器</div></a> <a href="/pages/91bad3266146c/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">2021 从跳槽到被裁</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/05c534dbae294/" class="prev">从零搭建服务器</a></span> <span class="next"><a href="/pages/91bad3266146c/">2021 从跳槽到被裁</a>→
+      </span></p></div></div></div> <div class="theme-vdoing-wrapper article-list bg-style-5"><div class="article-title"><a href="/archives/" class="fa fa-pencil-alt">
+      最近更新
+    </a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><div><a href="/pages/db19da37f8d9a/"><div>【学习打卡】2022-6 从心出发</div></a></div> <div class="date"><span>2022/06/01 00:00:00</span></div></dt></dl><dl><dd>02</dd> <dt><div><a href="/pages/e8f47145dd883/"><div>【面试】2022面经-详细篇</div></a></div> <div class="date"><span>2022/05/10 00:00:00</span></div></dt></dl><dl><dd>03</dd> <dt><div><a href="/pages/91bad3266146c/"><div>2021 从跳槽到被裁</div></a></div> <div class="date"><span>2022/05/08 00:00:00</span></div></dt></dl> <div class="more-box"><a href="/archives/" class="more"><i class="fas fa-angle-double-right"></i>前往更多 ...
+      </a></div></div></div> <div class="comments-wrapper" style="display:none;"><!----></div></main></div> <div class="footer-wrapper" data-v-51417878 data-v-51417878><span class="footer-reco-theme" data-v-51417878><i class="iconfont reco-github" data-v-51417878></i> <a target="blank" href="https://github.com/alexwjj/alexwjj.github.io" data-v-51417878>alexwjj.github.io@5.0</a></span> <!----> <span class="footer-copyright" data-v-51417878><i class="iconfont reco-copyright" data-v-51417878></i> <a data-v-51417878><span data-v-51417878>俊劫</span> <span class="ml5" data-v-51417878>
+          2018 - 2022
+        </span></a></span> <span class="footer-view-site" data-v-51417878><i class="iconfont reco-eye" data-v-51417878></i> <span id="busuanzi_container_site_uv" data-v-51417878>
+        访客数：<span id="busuanzi_value_site_uv" class="num" data-v-51417878>-</span></span> <span id="busuanzi_container_site_pv" class="ml5" data-v-51417878>
+        访问量：<span id="busuanzi_value_site_pv" class="num" data-v-51417878>-</span></span></span> <!----></div> <!----></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><!----><div></div></div></div>
+    <script src="/assets/js/app.c9b72092.js" defer></script><script src="/assets/js/2.db611675.js" defer></script><script src="/assets/js/78.5134230f.js" defer></script><script src="/assets/js/5.5bec4f64.js" defer></script>
+  </body>
+</html>
